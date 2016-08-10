@@ -6,7 +6,7 @@ export var Paths = {
     cssSources: [
         'node_modules/tether/src/css/tether.sass',
         'node_modules/bootstrap/scss/bootstrap.scss',
-        'src/styles/styles.scss'
+        'src/scss/audit-generator.scss'
     ],
     cssOutFolder: 'dist/css',
     cssOutFile: 'styles.css',
@@ -26,17 +26,12 @@ export var Paths = {
     jsDest: 'dist/js',
     jsLibs: [
         './node_modules/tether/dist/js/tether.js',
-        './node_modules/bootstrap/dist/js/bootstrap.js',
-        './node_modules/three/build/three.js'
+        './node_modules/bootstrap/dist/js/bootstrap.js'
     ],
     jsLibFile: 'lib.js',
     jsLibDest: 'dist/js/lib',
     jsLibOut: 'dist/js/lib/lib.js',
 
-    tsLibs: [
-        'reflect-metadata/Reflect.js',
-        'zone.js/dist/**/*.js'
-    ],
 
     svgSources: 'src/svg/**/*.svg',
     svgOut: 'dist/svg'
@@ -50,7 +45,6 @@ export var Tasks = {
     js: 'js',
     json: 'json',
     svg: 'svg',
-    ts: 'ts',
     watch: 'watch'
 };
 
@@ -62,7 +56,6 @@ var TaskDescriptions = [
     {name: Tasks.js, text: "Builds the JS from sources."},
     {name: Tasks.json, text: "Deploys static reference data JSON from sources."},
     {name: Tasks.svg, text: "Builds the SVG from sources."},
-    {name: Tasks.ts, text: "Builds the TS from sources."},
     {name: Tasks.watch, text: "Watches js/css/html files and rebuilds on change."}
 ];
 
@@ -70,13 +63,12 @@ export var WatchMap = [
     {path: 'src/svg/**/*.svg', tasks: [Tasks.svg]},
     {path: 'src/**/*.js', tasks: [Tasks.js]},
     {path: 'test/**/*.json', tasks: [Tasks.json]},
-    {path: 'src/app/**/*.ts', tasks: [Tasks.ts]},
     {path: 'src/styles/**/*.scss', tasks: [Tasks.css]},
     {path: 'src/**/*.html', tasks: [Tasks.html]}
 ];
 
 
-export var BuildChain = [Tasks.ts, Tasks.js, Tasks.svg, Tasks.css, Tasks.html, Tasks.json];
+export var BuildChain = [Tasks.js, Tasks.svg, Tasks.css, Tasks.html, Tasks.json];
 
 gulp.task('show-help', function () {
 
