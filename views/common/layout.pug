@@ -1,0 +1,22 @@
+doctype html
+
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        link(rel="icon" href="http://foxley.com/wp-content/uploads/2016/01/cropped-foxley_favicon2-32x32.png" sizes="32x32")
+        link(rel="stylesheet" href="/css/styles.css")
+
+        title #{title}
+
+    body
+        header
+            include header
+        div#content-top
+            block content
+
+        footer
+            include footer
+
+script(src="js/lib/lib.js")

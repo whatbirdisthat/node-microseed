@@ -1,0 +1,7 @@
+extends common/layout
+block content
+    h1 QUESTIONS SHOW UP HERE.
+    form(action="generate", method="post")
+    input(name="email", type="hidden", value=body.email)
+    include questions/q1
+    input(type="submit")

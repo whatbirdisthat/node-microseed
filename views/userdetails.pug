@@ -1,0 +1,13 @@
+extends common/layout
+block content
+    h1 USER DETAILS.
+    p #{body.email}
+    div.container
+        p Bring up the website you want to assess on another screen/window/device. Then, click continue below.
+        p Or don't.
+        p But that would make this whole thing a bit awkward.
+
+    form(action="questions", method="post")
+        input(name="email", type="hidden", value=body.email)
+        input(type="submit", value="CONTINUE. I WAS BORN READY.")
+
