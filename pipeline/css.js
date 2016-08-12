@@ -6,11 +6,15 @@ import concat from 'gulp-concat';
 import sourcemaps from 'gulp-sourcemaps';
 import cleanCSS from 'gulp-clean-css';
 
+
 gulp.task(Tasks.css, function () {
     return gulp.src(Paths.cssSources)
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed', sourceComments: 'map'})
-            .on('error', sass.logError))
+        .pipe(sass({
+            outputStyle: 'compressed',
+            sourceComments: 'map',
+            includePaths: './node_modules/bootstrap/scss'
+        }).on('error', sass.logError))
         .pipe(concat(Paths.cssOutFile))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(sourcemaps.write('.'))

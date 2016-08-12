@@ -4,13 +4,17 @@ export var Paths = {
     distRoot: 'dist',
 
     cssSources: [
-        'node_modules/tether/src/css/tether.sass',
-        'node_modules/bootstrap/scss/bootstrap.scss',
+        // 'node_modules/tether/src/css/tether.sass',
+        // 'node_modules/bootstrap/scss/bootstrap.scss',
         'src/scss/audit-generator.scss'
     ],
     cssOutFolder: 'dist/css',
     cssOutFile: 'styles.css',
 
+    views: [
+        'views/*.pug'
+    ],
+    htmlSrc: 'src/html',
     htmlSources: [
         'src/**/*.html'
     ],
@@ -42,6 +46,7 @@ export var Tasks = {
     clean: 'clean',
     css: 'css',
     html: 'html',
+    pug: 'pug',
     js: 'js',
     json: 'json',
     svg: 'svg',
@@ -53,6 +58,7 @@ var TaskDescriptions = [
     {name: Tasks.clean, text: "Removes the `dist` folder entirely."},
     {name: Tasks.css, text: "Builds the CSS from sass sources."},
     {name: Tasks.html, text: "Builds the HTML from sources."},
+    {name: Tasks.pug, text: "Builds the HTML from pug template sources."},
     {name: Tasks.js, text: "Builds the JS from sources."},
     {name: Tasks.json, text: "Deploys static reference data JSON from sources."},
     {name: Tasks.svg, text: "Builds the SVG from sources."},
@@ -63,12 +69,13 @@ export var WatchMap = [
     {path: 'src/svg/**/*.svg', tasks: [Tasks.svg]},
     {path: 'src/**/*.js', tasks: [Tasks.js]},
     {path: 'test/**/*.json', tasks: [Tasks.json]},
-    {path: 'src/styles/**/*.scss', tasks: [Tasks.css]},
-    {path: 'src/**/*.html', tasks: [Tasks.html]}
+    {path: 'src/scss/**/*.scss', tasks: [Tasks.css]},
+    {path: 'src/**/*.html', tasks: [Tasks.html]},
+    {path: 'views/**/*.pug', tasks: [Tasks.pug]}
 ];
 
 
-export var BuildChain = [Tasks.js, Tasks.svg, Tasks.css, Tasks.html, Tasks.json];
+export var BuildChain = [Tasks.js, Tasks.svg, Tasks.css, Tasks.pug, Tasks.html, Tasks.json];
 
 gulp.task('show-help', function () {
 
