@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
+var routes = require('./routes');
 
 var app = express();
 
@@ -15,18 +15,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 
-// uncomment after placing your favicon in /public
+// uncomment after placing your favicon in /dist
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/css', express.static(path.join(__dirname, 'dist/css')));
-app.use('/js', express.static(path.join(__dirname, 'dist/js')));
+app.use('/css', express.static('dist/css'));
+app.use('/js', express.static('dist/js'));
 
 app.use('/', routes);
-// app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,7 +42,11 @@ if (app.get('env') === 'development') {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
-      error: err
+      error: err,
+      title: "DEV",
+      runtime: {
+        "toolname": "ERROR_DEV"
+      }
     });
   });
 }
@@ -55,7 +57,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
-    error: {}
+    error: {},
+    title: "PROD",
+    runtime: {
+      "toolname": "ERROR_PROD"
+    }
+
   });
 });
 

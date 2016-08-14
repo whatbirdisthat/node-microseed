@@ -7,8 +7,8 @@ block content
         p Or don't.
         p But that would make this whole thing a bit awkward.
 
-    form(action="questions", method="post")
-        input(name="questions", type="hidden", value=questions)
+    form(name="gonogo" action="questions" method="post")
+        input(name="questions", type="hidden", value=body.questions)
         input(name="email", type="hidden", value=body.email)
         input(type="submit", value="CONTINUE. I WAS BORN READY.")
 
