@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "gulp watch",
-    "BSstart": "gulp build && node app & browser-sync start --proxy 'localhost:3001' --files 'dist'",
-    "start": "gulp build && concurrently \"lite-server\" \"gulp watch\" \"bin/www\"",
-    "XXstart": "concurrently \"lite-server\" \"gulp watch\"",
-    "lite": "lite-server",
+    "start": "bin/www & browser-sync start --proxy 'localhost:3001' --files 'dist'",
     "test": "test",
     "build": "gulp build",
     "clean": "gulp clean"

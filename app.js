@@ -21,7 +21,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'dist')));
+// app.use(express.static(path.join(__dirname, 'dist')));
+app.use('/css', express.static(path.join(__dirname, 'dist/css')));
+app.use('/js', express.static(path.join(__dirname, 'dist/js')));
 
 app.use('/', routes);
 // app.use('/users', users);
