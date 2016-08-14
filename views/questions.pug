@@ -3,5 +3,27 @@ block content
     h1 QUESTIONS SHOW UP HERE.
     form(action="generate", method="post")
     input(name="email", type="hidden", value=body.email)
-    include questions/q1
+
+    if body.questions
+        if body.questions[0]
+            include questions/q1
+        if questions[1]
+            include questions/q2
+        if questions[2]
+            include questions/q3
+        if questions[3]
+            include questions/q4
+        if questions[4]
+            include questions/q5
+        if questions[5]
+            include questions/q6
+        if questions[6]
+            include questions/q7
+        if questions[7]
+            include questions/q8
+        if questions[8]
+            include questions/q9
+        if questions[9]
+            include questions/q10
+
     input(type="submit")
