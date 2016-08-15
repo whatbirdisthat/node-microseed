@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A tool for generating audit reports of prospect web sites",
   "main": "index.js",
+  "engineStrict": true,
   "engines": {
     "node": ">6.2.1",
     "npm": ">3.9.3"
