@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A tool for generating audit reports of prospect web sites",
   "main": "index.js",
+  "engines": {
+    "node": ">6.2.1",
+    "npm" : ">3.9.3"
+  },
   "scripts": {
     "watch": "gulp watch",
     "start": "bin/www & browser-sync start --proxy 'localhost:3001' --files 'dist'",
