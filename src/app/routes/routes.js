@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
+import {RandomElements} from '../lib/randomelements';
+
 function render_aspect_a(res, view, data) {
     var runtime_constants = {
         toolname: "Client Connector",
@@ -23,7 +25,8 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/userdetails', function (req, res, next) {
-    req.body['questions'] = "[1,1,0,0,1,1,0,0,1,1]";
+    let randomElements = new RandomElements();
+    req.body['questions'] = randomElements.select();
 
     return render_aspect_a(res, 'userdetails', {
         title: "USER DETAILS",
