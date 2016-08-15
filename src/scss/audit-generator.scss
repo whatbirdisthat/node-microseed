@@ -1,0 +1,77 @@
+@import "bootstrap";
+
+body {
+  background-color: lighten($brand-primary, 12%);
+}
+
+header {
+  @extend .container;
+  @extend .navbar;
+  @extend .navbar-fixed-top;
+  background-color: $brand-primary;
+  a {
+    #header-logo {
+      height: $headings-line-height;
+    }
+
+    @extend .navbar-nav;
+    float: left;
+  }
+  p {
+    @extend .navbar-nav;
+    float: right;
+  }
+  height: $headings-line-height;
+}
+
+footer {
+  font-size: $small-font-size;
+  background-color: $brand-primary;
+  @extend .container;
+  @extend .navbar;
+  margin-top: 24px;
+  a {
+    float: right;
+  }
+}
+
+.body-copy {
+  white-space: pre-line;
+}
+
+label {
+  @extend .col-md-6;
+}
+
+input[type="submit"] {
+  @extend .col-md-2;
+}
+
+section#welcome {
+  @extend .container;
+  @extend .jumbotron;
+  @extend .col-md-8;
+  margin-top: 2em;
+}
+
+section#skip-the-marketing {
+  @extend .col-md-4;
+  background-color: $brand-warning;
+  padding-top: 2em;
+  p#headline {
+    font-size: $font-size-sm;
+  }
+  #user-details #disclaimer {
+    @extend .alert-warning;
+    margin-top: 8em;
+  }
+  padding-bottom: 2em;
+}
+
+#content-top {
+  @extend .jumbotron;
+  @extend .container;
+  text-align: center;
+  padding: 0;
+  margin-top: 4em;
+}
