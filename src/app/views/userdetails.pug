@@ -9,6 +9,7 @@ block content
 
     form(name="gonogo" action="questions" method="post")
         input(name="questions", type="hidden", value=body.questions)
+        input(name="answers", type="hidden", value=body.answers)
         input(name="email", type="hidden", value=body.email)
         input(type="submit", value="CONTINUE. I WAS BORN READY.")
 

@@ -86,7 +86,7 @@ export var WatchMap = [
     {path: 'test/**/*.json', tasks: [Tasks.json]},
     {path: 'src/scss/**/*.scss', tasks: [Tasks.css]},
     {path: 'src/**/*.html', tasks: [Tasks.html]},
-    {path: 'src/views/**/*.pug', tasks: [Tasks.pug]}
+    {path: 'src/app/views/**/*.pug', tasks: [Tasks.pug]}
 ];
 
 

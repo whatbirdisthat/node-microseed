@@ -1,4 +1,4 @@
-import {RandomElements} from "../../../src/app/lib/randomelements";
+import {RandomElements} from "../../src/app/lib/randomelements";
 
 var myStepDefinitionsWrapper = function () {
 

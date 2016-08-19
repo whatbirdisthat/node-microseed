@@ -2,51 +2,35 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
-import {RandomElements} from '../lib/randomelements';
+import {Site} from './site';
+import SurveyEngine from '../lib/SurveyEngine';
 
-function render_aspect_a(res, view, data) {
-    var runtime_constants = {
-        toolname: "Client Connector",
-        version: "1.0"
-    };
-    var renderdata = Object.assign(data, {runtime: runtime_constants});
-    console.log(renderdata);
-    return res.render(
-        view,
-        renderdata
-    );
-}
-
-router.get('/', function (req, res, next) {
-    return render_aspect_a(res, 'index', {
+router.get('/', (req, res, next) => {
+    return Site.render(res, 'index', {
         title: 'Foxley - Live Website Audit Tool'
     });
 
 });
 
-router.post('/userdetails', function (req, res, next) {
-    let randomElements = new RandomElements();
-    req.body['questions'] = randomElements.select();
+router.post('/userdetails', (req, res, next) => {
 
-    return render_aspect_a(res, 'userdetails', {
-        title: "USER DETAILS",
-        body: req.body
-    });
+    let survey = new SurveyEngine(req, res, 'userdetails');
+    return Site.renderSurvey(survey);
+
 });
 
-router.post('/questions', function (req, res, next) {
-    return render_aspect_a(res, 'questions', {
+router.post('/questions', (req, res, next) => {
+    return Site.render(res, 'questions', {
         title: "QUESTIONS",
         body: req.body
     });
 });
 
-router.post('/generate', function (req, res, next) {
-    return render_aspect_a(res, 'generate', {
+router.post('/generate', (req, res, next) => {
+    return Site.render(res, 'generate', {
         title: "GENERATOR",
         body: req.body,
     });
 });
-
 
 module.exports = router;

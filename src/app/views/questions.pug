@@ -3,6 +3,7 @@ block content
     h1 QUESTIONS SHOW UP HERE.
     form(action="generate", method="post")
         input(name="questions", type="hidden", value=body.questions)
+        input(name="answers", type="hidden", value=body.answers)
         input(name="email", type="hidden", value=body.email)
 
         if body.questions

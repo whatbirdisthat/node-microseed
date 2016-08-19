@@ -9,30 +9,18 @@ var mocha = require('gulp-mocha');
 var cucumber = require("gulp-cucumber");
 var babel = require('gulp-babel');
 
-gulp.task('serve:test', function (done) {
-    // browserSync({
-    //     logLevel: 'verbose',
-    //     notify: false,
-    //     open: false,
-    //     port: 9000,
-    //     server: {
-    //         baseDir: ['test/fixtures']
-    //     },
-    //     ui: false
-    // }, done);
-});
-
-gulp.task('atat'/*, ['serve:test', 'selenium']*/, function () {
+gulp.task('atat', function () {
     return gulp.src('test/**/*.feature', {read: false})
         .pipe(
             cucumber({
                 'steps': 'features/step_definitions/*steps.js',
                 'support': '*features/support/*.js',
-                'format': 'summary',
+                'format': 'pretty',
                 compiler: 'js:babel-core/register'
             })
         );
 });
+
 
 gulp.task('copy:views', function() {
     return gulp.src('src/app/views/**/*.pug')
@@ -56,9 +44,9 @@ gulp.task('pre-test', ['compile'], function () {
         // Force `require` to return covered files
         .pipe(istanbul.hookRequire());
 });
-gulp.task('integration', ['pre-test' /*, 'serve:test', 'selenium'*/], function () {
+gulp.task('integration', ['pre-test'], function () {
 
-    console.log('Coverage data will be available at file://' + __dirname + 'coverage/lcov-report/index.html');
+    console.log('Coverage data will be available at ' + __dirname + 'coverage/lcov-report/index.html');
 
     return gulp.src('test/**/*.spec.js', {read: false})
         .pipe(
