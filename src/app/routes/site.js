@@ -14,12 +14,11 @@ export class Site {
         );
     }
     static renderSurvey(survey) {
-        var renderdata = Object.assign(data, {runtime: runtimeConstants});
-        renderdata = Object.assign(renderdata, survey)
+        var renderdata = Object.assign(survey.data, {runtime: runtimeConstants});
         console.log(renderdata);
-        return res.render(
-            view,
-            renderdata
+        return survey.response.render(
+            survey.routeName,
+            {data: renderdata}
         );
     }
 }

@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 
 import {Site} from './site';
-import SurveyEngine from '../lib/SurveyEngine';
+import {SurveyEngine} from '../lib/SurveyEngine';
 
 router.get('/', (req, res, next) => {
     return Site.render(res, 'index', {

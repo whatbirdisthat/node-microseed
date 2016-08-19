@@ -3,7 +3,7 @@ import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import pug from 'gulp-pug';
 
-gulp.task(Tasks.pug, function () {
+gulp.task(Tasks.pug, ['copy:views'], function () {
 
     // return gulp.src(Paths.views)
     //     .pipe(pug({

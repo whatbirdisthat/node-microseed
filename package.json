@@ -10,7 +10,10 @@
   },
   "scripts": {
     "watch": "gulp watch",
-    "start": "bin/www & browser-sync start --proxy 'localhost:3001' --files 'dist'",
+    "Xprestart": "gulp clean && gulp build",
+    "Xstart": "bin/www & browser-sync start --proxy 'localhost:3001' --files 'dist'",
+    "start": "bin/www",
+    "browser-sync": "browser-sync start --proxy 'localhost:3001' --files 'dist'",
     "pretest": "gulp build",
     "test": "mocha --recursive --compilers js:babel-core/register test",
     "coverage": "gulp integration",

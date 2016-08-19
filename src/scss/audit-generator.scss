@@ -61,13 +61,17 @@ section#skip-the-marketing {
   p#headline {
     font-size: $font-size-sm;
   }
-  #user-details #disclaimer {
-    @extend .alert-warning;
-    margin-top: 8em;
-  }
-  #user-details #gobutton {
-    @extend .btn-success;
-    width: 5em;
+  #user-details{
+    #user-details-form {
+      #gobutton {
+        @extend .btn-success;
+        width: 5em;
+      }
+    }
+    #disclaimer {
+      @extend .alert-warning;
+      margin-top: 8em;
+    }
   }
   padding-bottom: 2em;
 }

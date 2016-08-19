@@ -1,15 +1,15 @@
 extends common/layout
 block content
     h1 USER DETAILSs.
-    p #{body.email}
+    p #{data.email}
     div.container
         p Bring up the website you want to assess on another screen/window/device. Then, click continue below.
         p Or don't.
         p But that would make this whole thing a bit awkward.
 
     form(name="gonogo" action="questions" method="post")
-        input(name="questions", type="hidden", value=body.questions)
-        input(name="answers", type="hidden", value=body.answers)
-        input(name="email", type="hidden", value=body.email)
+        input(name="questions", type="hidden", value=data.questions)
+        input(name="answers", type="hidden", value=data.answers)
+        input(name="email", type="hidden", value=data.email)
         input(type="submit", value="CONTINUE. I WAS BORN READY.")
 

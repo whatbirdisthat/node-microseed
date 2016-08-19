@@ -22,19 +22,6 @@ gulp.task('atat', function () {
 });
 
 
-gulp.task('copy:views', function() {
-    return gulp.src('src/app/views/**/*.pug')
-        .pipe(gulp.dest(Paths.libRoot + '/views'));
-});
-
-gulp.task('compile', ['copy:views'], function() {
-        return gulp.src('src/app/**/*.js')
-            .pipe(babel())
-            .pipe(gulp.dest(Paths.libRoot));
-    }
-);
-
-
 gulp.task('pre-test', ['compile'], function () {
     return gulp.src(['lib/**/*.js'])
     // Covering files
