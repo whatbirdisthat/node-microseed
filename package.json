@@ -16,6 +16,7 @@
     "browser-sync": "browser-sync start --proxy 'localhost:3001' --files 'dist'",
     "pretest": "gulp build",
     "test": "mocha --recursive --compilers js:babel-core/register test",
+    "testwatch": "mocha --recursive --compilers js:babel-core/register --watch test/specs",
     "coverage": "gulp integration",
     "build": "gulp build",
     "clean": "gulp clean"

@@ -82,6 +82,7 @@ export var WatchMap = [
     {path: 'src/svg/**/*.svg', tasks: [Tasks.svg]},
     {path: 'src/lib/**/*.js', tasks: [Tasks.integration]},
     {path: 'src/app/**/*.js', tasks: [Tasks.compile]},
+    {path: 'src/app/**/*.json', tasks: [Tasks.compile]},
     {path: 'src/js/**/*.js', tasks: [Tasks.js]},
     {path: 'test/**/*.json', tasks: [Tasks.json]},
     {path: 'src/scss/**/*.scss', tasks: [Tasks.css]},

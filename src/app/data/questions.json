@@ -1,0 +1,134 @@
+{
+  "questions": [
+    {
+      "text": "Does the website look professional and is it aesthetically pleasing?",
+      "affirmative": "It brought a tear to my eye. :’)",
+      "negative": "It brought a tear to my eye. :’("
+    },
+    {
+      "text": "Is there a professional logo?",
+      "affirmative": "Like Michelangelo himself sculpted it.",
+      "negative": "It’s like Comic Sans and Papyrus had a baby."
+    },
+    {
+      "text": "Is there a call to action (CTA) or key message in the main banner?",
+      "affirmative": "",
+      "negative": "Not even if you squint and tilt your head."
+    },
+    {
+      "text": "Is there a contact number on the top of the website?",
+      "affirmative": "",
+      "negative": "I’d have more luck getting digits from a supermodel."
+    },
+    {
+      "text": "Is it immediately clear what the business does?",
+      "affirmative": "",
+      "negative": "Yes: make people leave their website quickly."
+    },
+    {
+      "text": "Can you tell what the primary action or goal the website is asking for?",
+      "affirmative": "",
+      "negative": "Their goal must be to drive visitors away."
+    },
+    {
+      "text": "Can you tell what the secondary action/s the website is asking for?",
+      "affirmative": "",
+      "negative": "Just the void staring back at me."
+    },
+    {
+      "text": "Is the menu navigation logical and easy to move around the website?",
+      "affirmative": "",
+      "negative": "I just wanted to use the word “labyrinthine”."
+    },
+    {
+      "text": "Are there social media share buttons?",
+      "affirmative": "",
+      "negative": "More like ANTIsocial, am I right?!"
+    },
+    {
+      "text": "Is there a lead capture form on every page?",
+      "affirmative": "",
+      "negative": "They’re clearly relying on magic instead."
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    },
+    {
+      "text": "",
+      "affirmative": "",
+      "negative": ""
+    }
+  ]
+}

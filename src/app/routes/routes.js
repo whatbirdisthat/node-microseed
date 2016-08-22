@@ -4,6 +4,7 @@ var path = require('path');
 
 import {Site} from './site';
 import {SurveyEngine} from '../lib/SurveyEngine';
+import {RandomElements} from '../lib/randomelements';
 
 router.get('/', (req, res, next) => {
     return Site.render(res, 'index', {
@@ -14,7 +15,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/userdetails', (req, res, next) => {
 
-    let survey = new SurveyEngine(req, res, 'userdetails');
+    let survey = new SurveyEngine(req, 'userdetails');
     return Site.renderSurvey(survey);
 
 });
@@ -24,6 +25,15 @@ router.post('/questions', (req, res, next) => {
         title: "QUESTIONS",
         body: req.body
     });
+});
+
+router.post('/survey', (req, res, next) => {
+    let survey = new SurveyEngine(req, 'survey');
+    return Site.renderSurvey(survey);
+    // return Site.render(res, 'survey', {
+    //     title: "SURVEY",
+    //     body: req.body
+    // });
 });
 
 router.post('/generate', (req, res, next) => {
