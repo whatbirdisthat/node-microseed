@@ -15,7 +15,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/userdetails', (req, res, next) => {
 
-    let survey = new SurveyEngine(req, 'userdetails');
+    let survey = new SurveyEngine(req, 'userdetails', new RandomElements());
     return Site.renderSurvey(survey);
 
 });

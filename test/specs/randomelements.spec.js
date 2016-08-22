@@ -2,7 +2,7 @@ let assert = require('assert');
 let chai = require('chai');
 chai.should();
 
-let RandomElements = require('./../../lib/lib/randomelements');
+let RandomElements = require('./../../dist/app/lib/randomelements');
 
 describe('Random ID Sequence:', function () {
 

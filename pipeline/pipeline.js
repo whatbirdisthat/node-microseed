@@ -4,7 +4,7 @@ export var PROJECT_NAME = 'Audit Tool';
 
 export var Paths = {
     distRoot: 'dist',
-    libRoot: 'lib',
+    libRoot: 'dist/app',
     coverageRoot: 'coverage',
 
     cssSources: [

@@ -2,7 +2,7 @@ let assert = require('assert');
 let chai = require('chai');
 chai.should();
 
-import {SurveyEngine} from '../../lib/lib/SurveyEngine';
+import {SurveyEngine} from '../../dist/app/lib/SurveyEngine';
 class FakeRandomElements {
     select() {
         return '10011001001001001001100010';
@@ -95,7 +95,6 @@ describe('The Survey Engine:', function () {
         s.data.answers[6].should.equal('1');
         s.data.answers[7].should.equal('0');
         s.data.answers[8].should.equal('0');
-        console.log(s);
         assert(s.data.question_data != null,
             'there should be one last question');
     });
@@ -168,6 +167,29 @@ describe('The Survey Engine:', function () {
         }, testRequest);
         let s = new SurveyEngine(thisRequest, 'survey');
         s.data.question_data.text.should.equal("Is the menu navigation logical and easy to move around the website?")
+    });
+
+
+
+    it('handles construction with no questions, no answers and no randomiser', (done) => {
+        let s = new SurveyEngine({}, 'survey');
+
+        s.data.questions.should.equal('10011001001001001001100010');
+        done();
+    });
+
+    it('handles construction with no answers and no randomiser', (done) => {
+        let thisRequest = Object.assign({questions: testQuestionSelection}, testRequest);
+        let s = new SurveyEngine(thisRequest, 'survey');
+        s.data.questions.should.equal(testQuestionSelection);
+        done();
+    });
+
+    it('handles construction with questions and answers but no randomiser', (done) => {
+        let thisRequest = Object.assign({questions: testQuestionSelection, answers: '101'}, testRequest);
+        let s = new SurveyEngine(thisRequest, 'survey');
+        s.data.questions.should.equal(testQuestionSelection);
+        done();
     });
 
     after(function (done) {
