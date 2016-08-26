@@ -1,0 +1,19 @@
+block content
+    h1 #{data.heading}
+    p.
+        It has a unique sales hook, phone script and step-by-step workflow
+        that'll make you sound like the expert we know you are.
+    p Pop in your details below so we can send it your way.
+
+    input(type="hidden" name="customise" value="1")
+    input(type="hidden" name="positive" value="1")
+    input(type="hidden" name="negative" value="1")
+    input(type="hidden" name="confirmed" value="1")
+
+    input(type="hidden" name="strengths" value=data.gatheredStrengths)
+    input(type="hidden" name="weaknesses" value=data.gatheredWeaknesses)
+
+    input(type="text" name="email2" placeholder="CONFIRM YOUR EMAIL")
+    input(type="text" name="client_website" placeholder="CLIENT WEBSITE URL")
+
+    input(type="submit" value="SHIP THAT KIT")

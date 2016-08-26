@@ -1,3 +1,42 @@
 extends common/layout
+
+include generate/weaknesslist
+
 block content
-    h1 You are here!
+    h1 YOUR PICKUP EMAIL
+
+    section#generated-email
+        div
+            p Dear [PROSPECT FIRST NAME],
+            p Thanks for your call today.
+            p.
+                I had a look over your web site today and
+                there are some good points there, for example
+                it's great to see that
+                #{data.gatheredStrengths[0].shortpositive} and
+                #{data.gatheredStrengths[1].shortpositive}.
+            p.
+                But, there were also a number of things that
+                jumped out at me that could be losing you
+                online business.
+            p.
+                I know you are busy, so I won't write War & Peace,
+                I'll just touch on a few of my observations.
+
+            +weaknesslist(data.gatheredWeaknesses)
+
+            p.
+                There's a lot more to talk about but I think that's a good start.
+                I hope this overview helps you. I'd love to work with you and
+                deliver you a site that will both impress you and deliver
+                great results for your business!
+
+            p.
+                Remember a website is your online face to the world and it needs
+                to hit all the 'sweet spots' so it will be effective and make
+                you money ... otherwise it's just an expensive brochure.
+
+            p.
+                Talk soon,
+            p   [DESIGNER FIRST NAME]
+            p   [DESIGNER BUSINESS NAME]

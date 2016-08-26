@@ -1,0 +1,19 @@
+extends common/layout
+block content
+    section#review-form
+        form(name="review" action=data.destination method="post")
+            input(name="phase", type="hidden", value=data.phase)
+            input(name="email" type="hidden" value=data.email)
+            input(name="questions" type="hidden" value=data.questions)
+            input(name="answers", type="hidden", value=data.answers)
+
+            if data.phase == 0
+                include review/customise
+            else if data.phase == 1
+                include review/positive
+            else if data.phase == 2
+                include review/negative
+            else if data.phase == 3
+                include review/confirm
+            else if data.phase == 4
+                include review/ship

@@ -1,132 +1,210 @@
 {
   "questions": [
     {
+      "id": "a",
       "text": "Does the website look professional and is it aesthetically pleasing?",
+      "shortpositive": "Overall design looks professional.",
+      "shortnegative": "Overall design could be better.",
       "affirmative": "It brought a tear to my eye. :’)",
       "negative": "It brought a tear to my eye. :’("
     },
     {
+      "id": "b",
       "text": "Is there a professional logo?",
+      "shortpositive": "Good looking logo.",
+      "shortnegative": "Logo needs some love.",
       "affirmative": "Like Michelangelo himself sculpted it.",
       "negative": "It’s like Comic Sans and Papyrus had a baby."
     },
     {
+      "id": "c",
       "text": "Is there a call to action (CTA) or key message in the main banner?",
+      "shortpositive": "Clear call to action and key message.",
+      "shortnegative": "Missing call to action or key message.",
       "affirmative": "",
       "negative": "Not even if you squint and tilt your head."
     },
     {
+      "id": "d",
       "text": "Is there a contact number on the top of the website?",
+      "shortpositive": "Contact number on top of website.",
+      "shortnegative": "No contact number on top of website.",
       "affirmative": "",
       "negative": "I’d have more luck getting digits from a supermodel."
     },
     {
+      "id": "e",
       "text": "Is it immediately clear what the business does?",
+      "shortpositive": "It's clear what the business is about.",
+      "shortnegative": "It's unclear what the business is about.",
       "affirmative": "",
       "negative": "Yes: make people leave their website quickly."
     },
     {
+      "id": "f",
       "text": "Can you tell what the primary action or goal the website is asking for?",
+      "shortpositive": "Clear primary action for visitors.",
+      "shortnegative": "Need a primary action for visitors to take.",
       "affirmative": "",
       "negative": "Their goal must be to drive visitors away."
     },
     {
+      "id": "g",
       "text": "Can you tell what the secondary action/s the website is asking for?",
+      "shortpositive": "Clear secondary actions for visitors to take.",
+      "shortnegative": "No secondary actions for visitors to take.",
       "affirmative": "",
       "negative": "Just the void staring back at me."
     },
     {
+      "id": "h",
       "text": "Is the menu navigation logical and easy to move around the website?",
+      "shortpositive": "Clear, logical menu navigation.",
+      "shortnegative": "Menu navigation isn't easy.",
       "affirmative": "",
       "negative": "I just wanted to use the word “labyrinthine”."
     },
     {
+      "id": "i",
       "text": "Are there social media share buttons?",
+      "shortpositive": "Social media share buttons present.",
+      "shortnegative": "No social media share buttons present.",
       "affirmative": "",
       "negative": "More like ANTIsocial, am I right?!"
     },
     {
+      "id": "j",
       "text": "Is there a lead capture form on every page?",
+      "shortpositive": "Lead capture forms on every page.",
+      "shortnegative": "No lead capture forms on every page.",
       "affirmative": "",
       "negative": "They’re clearly relying on magic instead."
     },
     {
-      "text": "",
+      "id": "k",
+      "text": "Are there customer testimonials or reviews?",
+      "shortpositive": "Customer testimonials and reviews.",
+      "shortnegative": "No customer testimonials or reviews.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "l",
+      "text": "Google their website. Does it make the first page?",
+      "shortpositive": "Google-friendly.",
+      "shortnegative": "Not Google-friendly.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "m",
+      "text": "Does the website take 3 seconds or less to load?",
+      "shortpositive": "Website loads quickly.",
+      "shortnegative": "Website slow to load.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "n",
+      "text": "Is it responsive?",
+      "shortpositive": "Responsive design.",
+      "shortnegative": "No responsive design.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "o",
+      "text": "Is there a unique page title on every page? (Check the tab)",
+      "shortpositive": "Unique page title tags.",
+      "shortnegative": "No unique page title tags.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "p",
+      "text": "Does the page title include their brand?",
+      "shortpositive": "Brand in page title tags.",
+      "shortnegative": "Brand missing in page title tags.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "q",
+      "text": "Is there a unique meta description for each page?",
+      "shortpositive": "Unique meta descriptions for each page.",
+      "shortnegative": "No unique meta descriptions for each page.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "r",
+      "text": "Are there at least 500 words on each page?",
+      "shortpositive": "Sufficient word count.",
+      "shortnegative": "Insufficient word count.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "s",
+      "text": "Is the copy a good read?",
+      "shortpositive": "Copy is compelling.",
+      "shortnegative": "Copy isn't compelling.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "t",
+      "text": "Is the copy easy to digest with paragraph breaks and bullets?",
+      "shortpositive": "Copy is easy to read and digest.",
+      "shortnegative": "Copy is hard to read and digest.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "u",
+      "text": "Is there content with keywords above the fold?",
+      "shortpositive": "Keyword-rich content above the fold.",
+      "shortnegative": "No keyword-rich content above the fold.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "v",
+      "text": "Are there keywords in headings?",
+      "shortpositive": "Keywords in headings.",
+      "shortnegative": "Little or no keywords in headings.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "w",
+      "text": "Do all internal hyperlinks work correctly?",
+      "shortpositive": "Hyperlinks work.",
+      "shortnegative": "Not all hyperlinks work.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "x",
+      "text": "Is there a site map?",
+      "shortpositive": "Site map present.",
+      "shortnegative": "Missing site map.",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "y",
+      "text": "QUESTION Y",
+      "shortpositive": "Q25 YES",
+      "shortnegative": "Q25 NO",
       "affirmative": "",
       "negative": ""
     },
     {
-      "text": "",
+      "id": "z",
+      "text": "QUESTION Z",
+      "shortpositive": "Q26 YES",
+      "shortnegative": "Q26 NO",
       "affirmative": "",
       "negative": ""
     }

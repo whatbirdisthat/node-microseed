@@ -1,0 +1,17 @@
+block content
+    h1 #{data.heading}
+    p Select up to 5 weaknesses below (we don't want to make anyone cry).
+    p Pick the ones you're most knowledgeable about, in case the client asks for more detail.
+
+    div.container
+        each question in data.strengths
+            div.row
+                label(for=question.id) #{question.shortpositive}
+                input#question.id(name=question.id type="checkbox")
+
+    input(type="hidden" name="customise" value="1")
+    input(type="hidden" name="positive" value="1")
+    input(type="hidden" name="strengths" value=data.gatheredStrengths)
+    input(type="hidden" name="negative" value="1")
+    input(type="submit" value="FINISH MY KIT")
+

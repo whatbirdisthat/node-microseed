@@ -1,0 +1,28 @@
+extends common/layout
+block content
+    section#quesion
+        form#question-form(name="question-form" action=data.destination method="post")
+
+            input(type="hidden" name="questions" value=data.questions)
+            input(name="answers", type="hidden", value=data.answers)
+            input(name="email", type="hidden", value=data.email)
+
+            if data.question_data == null
+
+                section#almost_done
+                    div
+                        h1 You're almost done!
+                        h3 Time to review your results and start customizing an irresistible pickup kit
+                        input(type="submit" value="REVIEW RESULTS" class="btn btn-success")
+
+            else
+
+                div#question-text #{data.question_data.text}
+                div
+                    label(for="question_no") #{data.question_data.negative}
+                    input#question_no(name="this_question" type="radio" value="1")
+                div
+                    label(for="question_yes") #{data.question_data.affirmative}
+                    input#question_yes(name="this_question" type="radio" value="0")
+
+                input(type="submit")

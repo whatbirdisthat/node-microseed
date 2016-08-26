@@ -1,0 +1,16 @@
+block content
+    h1 #{data.heading}
+    p Select up to 2 strengths below to add to your kit.
+    p Conversations get off to a good start with a few compliments.
+    p If there aren't any... well... at least they have a website.
+
+    div.container
+        each question in data.strengths
+            div.row
+                label(for=question.id) #{question.shortpositive}
+                input(id=question.id name=question.id type="checkbox")
+
+    input(type="hidden" name="customise" value="1")
+    input(type="hidden" name="positive" value="1")
+    input(type="submit" value="NEXT")
+

@@ -7,17 +7,29 @@ let runtimeConstants = {
 export class Site {
     static render(res, view, data) {
         var renderdata = Object.assign(data, {runtime: runtimeConstants});
-        console.log(renderdata);
         return res.render(
             view,
             renderdata
         );
     }
-    static renderSurvey(survey) {
+    static renderSurvey(res, survey) {
         var renderdata = Object.assign(survey.data, {runtime: runtimeConstants});
-        console.log(renderdata);
-        return survey.response.render(
+        return res.render(
             survey.routeName,
+            {data: renderdata}
+        );
+    }
+    static renderReview(res, review) {
+        var renderdata = Object.assign(review.data, {runtime: runtimeConstants});
+        return res.render(
+            review.routeName,
+            {data: renderdata}
+        );
+    }
+    static renderGenerator(res, review) {
+        var renderdata = Object.assign(review.data, {runtime: runtimeConstants});
+        return res.render(
+            review.routeName,
             {data: renderdata}
         );
     }
